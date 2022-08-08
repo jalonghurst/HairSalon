@@ -56,6 +56,9 @@ body {
   background: url(../blonde.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 103%, 0 80%);
+  border-bottom-right-radius: 10%;
+  filter: drop-shadow(1px 5px 5px rgb(122, 98, 105));
 }
 
 h1 {
@@ -69,7 +72,7 @@ h1 {
 .section-two {
   width: 100%;
   height: 300px;
-  background-color: #b9b2b5;
+  /* background-color: #b9b2b5; */
 
 }
 
