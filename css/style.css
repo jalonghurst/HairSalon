@@ -1,10 +1,13 @@
 /* Box Model Hack */
 * {
   box-sizing: border-box;
-  /* border: black solid 1px; */
+
   font-family: 'Cinzel', serif;
 }
 
+html {
+  font-size: 62.5%;
+}
 /* Clear fix hack */
 .clearfix:after {
      content: ".";
@@ -25,75 +28,221 @@
 
 body {
   width: 100%;
-  height: 100%;
-  margin: 0;
+  height: auto;
+  margin: auto;
+
+}
+section {
+  margin: auto;
+  padding: 10%;
 }
 
-#main-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: no-wrap;
-  flex-basis: 100%;
-  justify-content: space-evenly; 
+span, li, i {
+  font-size: 1.6rem;
 }
-
-#main-nav {
- display: flex;
- width: 100%; 
- background-color: white;
- position: sticky;
- 
-}
-
-.book-online {
-  margin-left: 15%;
-}
-
-
-.section-one {
-  width: 100%;
-  height: 800px;
-  background: url(../blonde.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 103%, 0 80%);
-  border-bottom-right-radius: 10%;
-  filter: drop-shadow(1px 5px 5px rgb(122, 98, 105));
+p{
+  font-size: 1rem;
 }
 
 h1 {
   font-weight: lighter;
   font-size: 4rem;
-  padding-left: 8%;
   max-width: 30%;
   color: white;
 }
 
-.section-two {
-  width: 100%;
-  height: 300px;
-  /* background-color: #b9b2b5; */
-
+ h2 {
+  font-size: 3rem;
+  text-align: center;
 }
 
-.section-three {
-  width: 100%;
-  height: 500px;
+h3 {
+  font-size: 2rem;
+} 
 
+header {
+  justify-content: space-between;
+  flex-direction: row;
+  position:sticky;
+
+}
+#main-nav, #main-nav ul, section, header, footer, .columns {
+  width: 100%;
+  height: auto;
+}
+#main-nav {
+ background-color: white;
+ position: sticky;
+ padding: 0;
+ 
+}
+#main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: space-evenly; 
+  align-items: center;
+}
+
+.book-online {
+  margin-left: 5%;
+  
+}
+
+.top-section {
+  color: white;
+  background: url(../assets/blondemodel.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* clip-path: polygon(0 0, 100% 0, 100% 103%, 0 80%); */
+  border-bottom-right-radius: 10%;
+  filter: drop-shadow(1px 5px 5px rgb(122, 98, 105));
+  justify-content: space-between;
+  flex-direction: column;
+}
+.image-section {
+  background: url(../assets/blondemodel3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.limit-width {
+  width: 80%;
+  padding: 5%;
+}
+
+button {
+  background-color: black;
+  color: white;
+  margin-top:2%;
+  margin-bottom:2%;
+  border-radius: 1%;
+}
+
+#offer-box {
+  background-color: black;
+  padding: 2%;
+  width: 30%;
+  height: 40%;
+  z-index: -1;
+  opacity: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.col3 {
+  column-count: 3;
+  column-gap: 2%;  
+}
+.col2 {
+  column-count: 2;
+}
+
+.card {
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  height: auto;
+  margin-top: 3rem;
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+          page-break-inside: avoid; /* Firefox */
+               break-inside: avoid; /* IE 10+ */
+}
+
+.card img {
+  width:20%;
+  display: block;
+  margin: 0 auto;
+}
+
+iframe {
+	aspect-ratio: 16 / 9;
+	height: 100%;
+	width: 100%;
 }
 /******************************************
 /* LAYOUT
 /*******************************************/
 /* header {
 
+} */
+
+button, header span, li, .bold, .logo {
+  cursor: pointer;
 }
 
+ footer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+/* +header, section */
 
 footer {
+  padding: 1.5%;
+}
+footer span {
+  font-size: 1.4rem;
+}
+ .footer-nav span, .footer-nav i, button {
+  padding: 1rem;
+}
 
-} */
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+.grey {
+  color: #b9b2b5;
+}
+.grey-backdrop {
+  background-color: #b9b2b5;
+  color: white;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.top-margin-none{
+  margin-top: 0
+}
+.white-border-left {
+  border-left: white solid 2px;
+}
+
+.white-button {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  padding: 3%;
+  margin: 20%;
+}
+
+@media (max-width: 750px) {
+
+  .col2, .col3 {
+    column-count: 1;
+    column-gap: 7rem;
+    text-align: center;
+ }
+ .limit-width {
+  width: 100%;
+ }
+ section {
+  padding: 5%;
+ }
+
+  li {
+    font-size: 1rem;
+  }
+
+  .book-online {
+    margin-left: 10%;
+  }
+}
