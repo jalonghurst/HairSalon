@@ -39,6 +39,7 @@ section {
 span, li, i {
   font-size: 1.6rem;
 }
+
 p{
   font-size: 1.6rem;
 }
@@ -195,6 +196,9 @@ footer {
 footer span {
   font-size: 1.4rem;
 }
+.footer-span {
+  font-size: 1.2rem;
+}
  .footer-nav span, .footer-nav i, button {
   padding: 1rem;
 }
@@ -267,6 +271,9 @@ footer span {
   .card .round-img, .dark {
     width: 40%;
   }
+  #main-nav ul {
+    padding-left: 0;
+  }
 .column {
     -ms-flex: 50%;
     flex: 50%;
@@ -305,6 +312,9 @@ footer span {
   }
   span {
     font-size: 1.4em;;
+  }
+  .footer-span  {
+    font-size: 1.2rem;
   }
  #offer-box {
   width: 40%;
