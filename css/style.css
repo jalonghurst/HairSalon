@@ -1,7 +1,6 @@
 /* Box Model Hack */
 * {
   box-sizing: border-box;
-
   font-family: 'Cinzel', serif;
 }
 
@@ -41,7 +40,7 @@ span, li, i {
   font-size: 1.6rem;
 }
 p{
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 h1 {
@@ -110,13 +109,14 @@ header {
   padding: 5%;
 }
 
-button {
+button{
   background-color: black;
   color: white;
   margin-top:2%;
   margin-bottom:2%;
   border-radius: 1%;
 }
+
 
 #offer-box {
   position: relative;
@@ -201,6 +201,7 @@ footer span {
 .card .round-img {
   width:60%;
   border-radius: 50%;
+  margin-bottom: 5%;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
@@ -257,17 +258,8 @@ footer span {
 }
 
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }/* Responsive layout - makes a two column-layout instead of four columns */
-
-
 @media (max-width: 750px) {
-  .card .round-img {
+  .card .round-img, .dark {
     width: 40%;
   }
 .column {
@@ -284,8 +276,8 @@ footer span {
   width: 100%;
  }
  section {
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
  }
 
   li {
@@ -295,5 +287,19 @@ footer span {
   .book-online {
     margin-left: 10%;
   }
-}
-}
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+  .hide {
+    display: none;
+  }
+  span {
+    font-size: 1.4em;;
+  }
+ #offer-box {
+  width: 40%;
+ }
+
+}/* Responsive layout - makes a two column-layout instead of four columns *
